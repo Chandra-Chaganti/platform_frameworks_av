@@ -136,6 +136,14 @@ cc_library_shared {
         "-Wno-ignored-qualifiers",
     ],
 
+    product_variables: {
+        lucid: {
+            target_camera_needs_client_info: {
+                cflags: ["-DTARGET_NEEDS_CLIENT_INFO"],
+            },
+        },
+    },
+
 }
 
 cc_library_shared {
